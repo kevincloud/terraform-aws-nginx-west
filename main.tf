@@ -13,7 +13,7 @@ resource "aws_instance" "nginx_instance" {
     ami = "${data.aws_ami.ubuntu.id}"
     instance_type = "t2.micro"
     vpc_security_group_ids = ["${aws_security_group.nginx-sg.id}"]
-    key_name = "kevin-sedemos"
+    key_name = "kevin-sedemos-or"
     user_data = "${data.template_file.user_data.rendered}"
 
     tags = {
